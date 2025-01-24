@@ -12,7 +12,7 @@ target/
 *.iml
 *.ipr
 src/test/java/Study/
-srs/main/java/
+
 
 ### Eclipse ###
 .apt_generated

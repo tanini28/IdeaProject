@@ -1,13 +1,14 @@
-package Pages1;
+package Tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import page.ZazaPrintHomePage;
 
-public class ZazaPrintSearchFlayers {
+public class ZazaPrintSearchFlayersTest {
 
     public WebDriver driver;
-    public ZazaPrintHomePage  zazaPrintHomePage;
+    public ZazaPrintHomePage zazaPrintHomePage;
 
     @Test
     public void ZazaPrintSearch() {

@@ -1,17 +1,18 @@
-package Pages1;
+package Tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.VovkHomePage;
 
-public class VovkRegistration {
+public class VovkRegistrationTest {
 
     public WebDriver driver;
     public VovkHomePage vovkHomePage;
 
     @Test
-    public void VovkRegistration() {
+    public void vovkRegistrationTest() {
 
         driver = new ChromeDriver();
         vovkHomePage = new VovkHomePage(driver);
@@ -31,7 +32,6 @@ public class VovkRegistration {
 
         vovkHomePage.clickHomeLogo();
 
-        driver.quit();
     }
 
 }

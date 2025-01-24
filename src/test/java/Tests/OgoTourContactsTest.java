@@ -1,17 +1,18 @@
-package Pages1;
+package Tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.OgoTourHomePage;
 
-public class OgoTourContacts {
+public class OgoTourContactsTest extends TestInit{
 
     public WebDriver driver;
     public OgoTourHomePage ogoTourHomePage;
 
     @Test
-    public void OgoTourContact () {
+    public void setOgoTourTest() {
 
         driver = new ChromeDriver();
         ogoTourHomePage = new OgoTourHomePage(driver);
@@ -24,8 +25,7 @@ public class OgoTourContacts {
         ogoTourHomePage.enterMessage("Хочу поїхати в Єгипет, надішліть варіанти");
         ogoTourHomePage.clickSubmitButton();
 
-        Assert.assertTrue( ogoTourHomePage.isSuccessMessageDisplayed(),"Повідомлення про успіх не відображено");
-
+        Assert.assertTrue(ogoTourHomePage.isSuccessMessageDisplayed(),"Повідомлення про успіх не відображено");
         String expectedMessage = "Дякуємо за ваше звернення! З вами зв'яжутся найближчим часом.";
         Assert.assertEquals("Текст повідомлення про успіх не співпадає", expectedMessage, ogoTourHomePage.getSuccessMessageText());
     }

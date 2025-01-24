@@ -1,17 +1,18 @@
-package Pages1;
+package Tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.VovkHomePage;
 
-public class VovkDress {
+public class VovkDressTest {
 
     public WebDriver driver;
     public VovkHomePage vovkHomePage;
 
     @Test
-    public void testDress() {
+    public void dressTest() {
         driver = new ChromeDriver();
         vovkHomePage = new VovkHomePage(driver);
 
@@ -32,7 +33,6 @@ public class VovkDress {
 
         Assert.assertTrue(vovkHomePage.isProductInCart(), "Продукт не знайдений у кошику");
 
-        driver.quit();
 
     }
 }

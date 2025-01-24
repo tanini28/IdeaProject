@@ -1,15 +1,14 @@
-package Pages1;
+package Tests;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.ZazaPrintHomePage;
 
-public class ZazaPrintCatalog {
+public class ZazaPrintCatalogTest {
 
     public WebDriver driver;
-    public ZazaPrintHomePage  zazaPrintHomePage;
+    public ZazaPrintHomePage zazaPrintHomePage;
 
     @Test
     public void ZazaPrintMenu() {

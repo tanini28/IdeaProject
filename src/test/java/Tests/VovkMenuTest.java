@@ -1,17 +1,18 @@
-package Pages1;
+package Tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.VovkHomePage;
 
-public class VovkMenu {
+public class VovkMenuTest {
 
     public WebDriver driver;
     public VovkHomePage vovkHomePage;
 
     @Test
-    public void VovkMenu1() {
+    public void vovkMenuTest() {
 
         driver = new ChromeDriver();
         vovkHomePage = new VovkHomePage(driver);
@@ -26,6 +27,5 @@ public class VovkMenu {
 
         Assert.assertTrue(driver.getCurrentUrl().contains("order"));
 
-        driver.quit();
     }
 }
