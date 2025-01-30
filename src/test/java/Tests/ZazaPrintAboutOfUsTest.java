@@ -5,16 +5,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import page.ZazaPrintHomePage;
 
-public class ZazaPrintAboutOfUsTest {
+public class ZazaPrintAboutOfUsTest extends TestInit{
 
     public WebDriver driver;
     public ZazaPrintHomePage zazaPrintHomePage;
 
     @Test
-    public void ZazaPrintAboutOfUs1() {
+    public void zazaPrintAboutOfUsTest() {
 
         driver = new ChromeDriver();
         zazaPrintHomePage = new ZazaPrintHomePage(driver);
+
         driver.manage().deleteAllCookies();
 
         zazaPrintHomePage.clickAboutUs();
@@ -22,8 +23,7 @@ public class ZazaPrintAboutOfUsTest {
         zazaPrintHomePage.isVideoLinkAvailable();
         zazaPrintHomePage.clickVideoLink();
         zazaPrintHomePage.isVideoPageOpened();
-        zazaPrintHomePage.clickLogoImage();
+        zazaPrintHomePage.clickMainLogoImage();
 
-        driver.quit();
     }
 }

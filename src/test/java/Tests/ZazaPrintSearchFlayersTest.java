@@ -5,13 +5,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import page.ZazaPrintHomePage;
 
-public class ZazaPrintSearchFlayersTest {
+public class ZazaPrintSearchFlayersTest extends TestInit{
 
     public WebDriver driver;
     public ZazaPrintHomePage zazaPrintHomePage;
 
     @Test
-    public void ZazaPrintSearch() {
+    public void zazaPrintSearchTest() {
 
         driver = new ChromeDriver();
         zazaPrintHomePage = new ZazaPrintHomePage(driver);
@@ -23,7 +23,7 @@ public class ZazaPrintSearchFlayersTest {
         zazaPrintHomePage.setResultText();
         zazaPrintHomePage.setResultText();
 
-        driver.quit();
+
 
     }
 }

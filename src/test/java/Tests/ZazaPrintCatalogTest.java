@@ -5,13 +5,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import page.ZazaPrintHomePage;
 
-public class ZazaPrintCatalogTest {
+public class ZazaPrintCatalogTest extends TestInit {
 
     public WebDriver driver;
     public ZazaPrintHomePage zazaPrintHomePage;
 
     @Test
-    public void ZazaPrintMenu() {
+    public void zazaPrintMenuTest() {
 
         driver = new ChromeDriver();
         zazaPrintHomePage = new ZazaPrintHomePage(driver);
@@ -31,7 +31,7 @@ public class ZazaPrintCatalogTest {
         zazaPrintHomePage.clickDropDown();
         zazaPrintHomePage.clickCity();
 
-        driver.quit();
+
 
     }
 }

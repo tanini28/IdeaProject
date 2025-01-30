@@ -16,6 +16,7 @@ public class OgoTourContactsTest extends TestInit{
 
         driver = new ChromeDriver();
         ogoTourHomePage = new OgoTourHomePage(driver);
+
         driver.manage().deleteAllCookies();
 
         ogoTourHomePage.OpenHomePage();

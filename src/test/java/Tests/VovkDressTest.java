@@ -6,13 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.VovkHomePage;
 
-public class VovkDressTest {
+public class VovkDressTest extends TestInit{
 
     public WebDriver driver;
     public VovkHomePage vovkHomePage;
 
     @Test
     public void dressTest() {
+
         driver = new ChromeDriver();
         vovkHomePage = new VovkHomePage(driver);
 

@@ -16,9 +16,10 @@ public class OgoTourHotTest extends TestInit{
     @Test
     public void ogoTourHotTest (){
 
-        OgoTourHomePage ogoTourHomePage = new OgoTourHomePage(driver);
-        ogoTourHomePage.openHomePage();
+        driver = new ChromeDriver();
+        ogoTourHomePage = new OgoTourHomePage(driver);
 
+        ogoTourHomePage.openHomePage();
         ogoTourHomePage.clickHotTour();
         ogoTourHomePage.clickTourAlbania();
         ogoTourHomePage.clickLogoTour();

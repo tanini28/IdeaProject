@@ -6,7 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.VovkHomePage;
 
-public class VovkMenuTest {
+public class VovkMenuTest extends TestInit {
 
     public WebDriver driver;
     public VovkHomePage vovkHomePage;
